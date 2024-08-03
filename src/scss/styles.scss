@@ -1,18 +1,48 @@
 @import './header.scss';
 @import './vite-promo.scss';
-
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+@font-face {
+  font-family: 'Montio';
+  src: url('/fonts/Montio-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans.ttf') format('truetype');
   font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--body-text-color);
+  background-color: var(--background-color);
+  transition: background-color 1.5s;
+}
+:root {
+  color: #202020;
+  background-color: #fcf5e5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+.nav-mob,
+.nav-page2 {
+  display: none; /* Скрыть оба меню по умолчанию */
+}
+
+.nav-mob.active,
+.nav-page2.active {
+  display: block; /* Показать активное меню */
 }

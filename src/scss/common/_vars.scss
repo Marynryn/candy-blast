@@ -1,4 +1,16 @@
-$_main_color: #242424;
-$_main_bg_color: rgba(255, 255, 255, 0.87);
-$_header_color: #747bff;
-$_header_accent_color: red;
+$_main_color: #202020;
+$_main_bg_color: #fcf5e5;
+$_hover_color: #cc317e;
+$_pressed_color: #65143c;
+$_white_color: #ffffff;
+$_black_color: #000000;
+$_line-color: #fbee3e;
+$_star_color: #cb5915;
+$_gradient_color_blue: #4a1a9a;
+$_gradient_color_pink: #b91a8e;
+
+$gradient-button: linear-gradient(
+  to bottom,
+  $_gradient_color_pink,
+  $_gradient_color_blue
+);
