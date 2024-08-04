@@ -27,7 +27,7 @@ screen types:
   //     @content;
   //   }
   // }
-   @else if $_screen == desktop {
+  @else if $_screen == desktop {
     @media screen and (min-width: $desktop) {
       @content;
     }

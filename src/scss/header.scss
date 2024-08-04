@@ -72,3 +72,12 @@ $menu-width: 200px;
   top: 10px;
   right: 10px;
 }
+.nav-mob,
+.nav-page2 {
+  display: none; /* Скрыть оба меню по умолчанию */
+}
+
+.nav-mob.active,
+.nav-page2.active {
+  display: block; /* Показать активное меню */
+}

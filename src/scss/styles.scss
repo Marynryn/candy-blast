@@ -1,5 +1,4 @@
-@import './header.scss';
-@import './vite-promo.scss';
+@import './common/reset';
 @font-face {
   font-family: 'Montio';
   src: url('/fonts/Montio-Bold.otf') format('opentype');
@@ -37,12 +36,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-.nav-mob,
-.nav-page2 {
-  display: none; /* Скрыть оба меню по умолчанию */
-}
-
-.nav-mob.active,
-.nav-page2.active {
-  display: block; /* Показать активное меню */
-}
+@import './header.scss';
