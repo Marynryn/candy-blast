@@ -1,0 +1,46 @@
+@import './common/vars';
+@import './common/breakpoints';
+footer {
+  background-color: $_black_color;
+  color: $_white_color;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  @media screen and (min-width: $desktop) {
+    gap: 16px;
+  }
+}
+.policy-link,
+.terms-link {
+  @include font(16, 16);
+  text-transform: uppercase;
+  padding: 8px 24px;
+  @media screen and (min-width: $desktop) {
+    @include font(32, 32);
+  }
+}
+.footer-text {
+  @include font(12, 18);
+  @media screen and (min-width: $desktop) {
+    @include font(24, 36);
+  }
+}
+.links-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    gap: 24px;
+  }
+}

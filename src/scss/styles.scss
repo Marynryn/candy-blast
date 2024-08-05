@@ -1,4 +1,8 @@
 @import './common/reset';
+@import './common/breakpoints';
+@import './common/vars';
+@import './common/mixins';
+
 @font-face {
   font-family: 'Montio';
   src: url('/fonts/Montio-Bold.otf') format('opentype');
@@ -22,6 +26,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
+  position: relative;
   color: var(--body-text-color);
   background-color: var(--background-color);
   transition: background-color 1.5s;
@@ -36,4 +41,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.container {
+  padding: 0 24px;
+  width: 272px;
+  margin: 0 auto;
+  @media screen and (min-width: $desktop) {
+    padding: 0 72px;
+    width: 1296px;
+  }
+}
+section {
+  margin: 96px 0;
+  @media screen and (min-width: $desktop) {
+    margin: 160px 0;
+  }
+}
 @import './header.scss';
+@import './footer.scss';
+@import './page2-3.scss';
+@import './hero.scss';

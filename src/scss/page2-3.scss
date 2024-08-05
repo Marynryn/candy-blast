@@ -1,0 +1,68 @@
+@import './common/mixins';
+@import './common/vars';
+@import './common/breakpoints';
+
+.policy,
+.terms {
+  margin-top: 138px;
+  margin-bottom: 40px;
+  @media screen and (min-width: $desktop) {
+    margin-top: 152px;
+    margin-bottom: 56px;
+  }
+}
+.policy-title,
+.terms-title {
+  font-weight: 700;
+  @include font(24, 28.8);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  @media screen and (min-width: $desktop) {
+    font-family: Montio, sans-serif;
+    margin-bottom: 24px;
+    @include font(56, 61.6);
+    background: var(--cb-liner, $gradient-button);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.terms-text,
+.policy-text-span,
+.policy-text {
+  @include font(16, 24);
+  margin-bottom: 10px;
+  @media screen and (min-width: $desktop) {
+    @include font(24, 36);
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+}
+.policy-subtitle,
+.terms-subtitle {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  @include font(16, 24);
+  @media screen and (min-width: $desktop) {
+    margin-top: 56px;
+    margin-bottom: 24px;
+    @include font(32, 38.4);
+    text-transform: uppercase;
+  }
+}
+
+.container-2 {
+  margin: 0 auto;
+  width: 272px;
+  padding-left: 24px;
+  padding-right: 24px;
+  @media screen and (min-width: $desktop) {
+    width: 850px;
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+}
+.policy-text-span {
+  font-weight: 700;
+}

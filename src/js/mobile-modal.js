@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const menuOpen = document.getElementById('menu-toggle');
   const menuClose = document.getElementById('menu-close');
-
+  const mobileMenu = document.getElementById('mobile-menu');
+  const backdrop = document.getElementById('backdrop');
   const navMob = document.querySelector('.nav-mob');
   const navPage2 = document.querySelector('.nav-page2');
+  const nav = document.querySelector('.nav');
+  const header = document.getElementById('box');
 
   function switchMenu() {
     const currentPage = window.location.pathname;
@@ -12,19 +14,28 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentPage.includes('index.html')) {
       navPage2.classList.remove('active');
       navMob.classList.add('active');
+      nav.classList.add('active');
+      header.classList.remove('.active');
     } else {
       navMob.classList.remove('active');
       navPage2.classList.add('active');
+      nav.classList.remove('active');
+      header.classList.add('active');
     }
   }
 
   switchMenu();
 
-  menuToggle.addEventListener('click', function () {
-    mobileMenu.classList.toggle('active');
-  });
+  function toggleMenu() {
+    const isMenuOpen = mobileMenu.classList.contains('active');
 
-  menuClose.addEventListener('click', function () {
-    mobileMenu.classList.remove('active');
-  });
+    mobileMenu.classList.toggle('active', !isMenuOpen);
+    backdrop.classList.toggle('active', !isMenuOpen);
+    menuOpen.classList.toggle('active', isMenuOpen);
+    menuClose.classList.toggle('active', !isMenuOpen);
+  }
+
+  menuOpen.addEventListener('click', toggleMenu);
+  menuClose.addEventListener('click', toggleMenu);
+  backdrop.addEventListener('click', toggleMenu);
 });

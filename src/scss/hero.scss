@@ -1,0 +1,186 @@
+@import './common/mixins';
+@import './common/vars';
+@import './common/breakpoints';
+
+.hero {
+  margin-top: 138px;
+}
+.title {
+  font-family: Montio;
+  @include font(32, 35.2);
+  max-width: 20ch;
+  overflow: hidden;
+  white-space: normal;
+  position: relative;
+  font-weight: 700;
+  text-transform: uppercase;
+  @media screen and (min-width: $desktop) {
+    @include font(72, 79.2);
+  }
+}
+.title-img {
+  display: inline-block;
+  width: 23px;
+  height: 25px;
+  transform: rotate(15deg);
+  margin-bottom: 4px;
+  background-image: url('../img/mobile/ball.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../img/mobile/ball-2x.webp');
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('../img/desktop/ball.webp');
+    width: 48px;
+    height: 48px;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('../img/desktop/ball-2x.webp');
+    }
+  }
+}
+.paragraph {
+  @include font(16, 24);
+  margin-top: 12px;
+  margin-bottom: 12px;
+  @media screen and (min-width: $desktop) {
+    @include font(24, 36);
+  }
+}
+.hero-span {
+  display: flex;
+}
+
+.google-btn {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    padding: 16px 24px;
+    align-items: center;
+    gap: 3px;
+    width: 227px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: var(--cb-liner, $gradient-button);
+    margin-top: 48px;
+
+    text-transform: uppercase;
+    color: $_white_color;
+    transition: background 0.8s ease;
+    &:hover {
+      background: var(--cb-liner, $_hover_color);
+    }
+    &:focus {
+      background: var(--cb-liner, $_pressed_color);
+    }
+    svg {
+      width: 54px;
+      height: 54px;
+      stroke: $_white_color;
+
+      fill: transparent;
+    }
+  }
+}
+.google-btn-2 {
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 3px;
+  width: 224px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--cb-liner, $gradient-button);
+  margin-top: 48px;
+
+  text-transform: uppercase;
+  color: $_white_color;
+  transition: background 0.8s ease;
+  &:hover {
+    background: var(--cb-liner, $_hover_color);
+  }
+  &:focus {
+    background: var(--cb-liner, $_pressed_color);
+  }
+  svg {
+    width: 54px;
+    height: 54px;
+    stroke: $_white_color;
+
+    fill: transparent;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.hero-box-image {
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.google-btn-text {
+  @include font(16, 16);
+  font-weight: 600;
+  display: block;
+}
+.google-btn-title {
+  font-weight: 700;
+  display: block;
+  margin-top: 4px;
+  @include font(24, 24);
+}
+.hero-box {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+}
+.google-box {
+  width: 100%;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+
+  width: 272px;
+  margin: 40px auto 0;
+  padding: 16px 24px;
+  @media screen and (min-width: $desktop) {
+    width: 1296px;
+    padding: 16px 72px;
+  }
+}
+
+.disclaimer {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+
+  @include font(40, 40);
+  @media screen and (min-width: $desktop) {
+    @include font(56, 56);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

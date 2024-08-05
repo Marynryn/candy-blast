@@ -1,34 +1,41 @@
 <header class="header">
-  <div class="logo">
-    <img
-      class="logo-img"
-      src="./img/logo.webp"
-      srcset="./img/logo.webp 1x, ./img/logo2x.webp 2x"
-      alt="Candy Blast logo"
-    />
+  <div class="container header-box" id="box">
+    <a href="/index.html" class="logo">
+      <img
+        class="logo-img"
+        src="./img/logo.webp"
+        srcset="./img/logo.webp 1x, ./img/logo2x.webp 2x"
+        alt="Candy Blast logo"
+      />
+    </a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#gallery" class="nav-link">Gallery</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#advantages" class="nav-link">Advantages</a>
+        </li>
+        <li class="nav-item">
+          <a href="#faq" class="nav-link">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button id="menu-toggle" class="menu-toggle active" type="button">
+      <svg class="burger-icon" width="40px" height="40px">
+        <use href="../svg/symbol-defs.svg#icon-burger"></use>
+      </svg>
+    </button>
+    <button id="menu-close" class="menu-close" type="button">
+      <svg class="close-icon" width="40px" height="40px">
+        <use href="../svg/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+    <load ="partials/menu.html" />
   </div>
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="#gallery" class="nav-link">Gallery</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="#about" class="nav-link">About</a>
-      </li>
-      <li class="nav-item">
-        <a href="#advantages" class="nav-link">Advantages</a>
-      </li>
-      <li class="nav-item">
-        <a href="#faq" class="nav-link">FAQ</a>
-      </li>
-    </ul>
-  </nav>
-
-  <button id="menu-toggle" class="menu-toggle" type="button">
-    <svg class="burger-btn" width="40px" height="40px">
-      <use href="../svg/symbol-defs.svg#icon-burger"></use>
-    </svg>
-  </button>
-  <load ="partials/menu.html" />
 </header>
