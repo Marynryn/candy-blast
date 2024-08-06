@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <!-- Define the symbol -->
+    <symbol id="icon-level" viewBox="0 0 120 120">
+      <g clip-path="url(#clip0_2075_1062)">
+        <path d="M20 95H100" stroke="url(#paint0_linear_2075_1062)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20 75L40 45L60 55L80 30L100 50" stroke="url(#paint1_linear_2075_1062)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </symbol>
+    <!-- Define gradients -->
+    <linearGradient id="paint0_linear_2075_1062" x1="60" y1="95" x2="60" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B91A8E"/>
+      <stop offset="1" stop-color="#4A1A9A"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_2075_1062" x1="60" y1="30" x2="60" y2="75" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B91A8E"/>
+      <stop offset="1" stop-color="#4A1A9A"/>
+    </linearGradient>
+    <!-- Define clip path -->
+    <clipPath id="clip0_2075_1062">
+      <rect width="120" height="120" fill="white"/>
+    </clipPath>
+  </defs>
+
+</svg>

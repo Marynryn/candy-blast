@@ -1,0 +1,56 @@
+@import './common/mixins';
+@import './common/vars';
+@import './common/breakpoints';
+
+.google-button {
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 3px;
+  width: 227px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--cb-liner, $gradient-button);
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: $_white_color;
+  transition: background 0.8s ease;
+  &:hover {
+    background: var(--cb-liner, $_hover_color);
+  }
+  &:focus {
+    background: var(--cb-liner, $_pressed_color);
+  }
+  svg {
+    width: 54px;
+    height: 54px;
+    stroke: $_white_color;
+
+    fill: transparent;
+  }
+}
+.game-photo {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+    width: 1296px;
+    height: 625px;
+    margin-bottom: 56px;
+    background-image: url('../img/mobile/gallery1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('../img/mobile/gallery1-2x.webp');
+    }
+    @media screen and (min-width: $desktop) {
+      background-image: url('../img/desktop/gallery1.webp');
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('../img/desktop/gallery1-2x.webp');
+      }
+    }
+  }
+}
+.blast {
+  margin-bottom: 24px;
+}

@@ -1,0 +1,103 @@
+@import './common/mixins';
+@import './common/vars';
+@import './common/breakpoints';
+
+.reviews-item {
+  display: flex;
+  width: 224px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 16px;
+  border: 3px solid var(--cb-logo-stroke, #b91a8e);
+  background: var(--cb-basic-white, #fff);
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: $_star_color;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 492px;
+  }
+}
+
+.reviews-button-next,
+.reviews-button-prev {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+    position: absolute;
+    top: 60%;
+    width: 56px;
+    height: 56px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    svg {
+      fill: $_default_color;
+      width: 56px;
+      height: 56px;
+      &:hover {
+        fill: $_hover_color;
+        transition: stroke 0.3s ease;
+      }
+
+      &:focus {
+        fill: $_pressed_color;
+        transition: stroke 0.3s ease;
+      }
+    }
+  }
+}
+.reviews-button-prev {
+  left: 70px;
+}
+.reviews-button-next {
+  right: 70px;
+}
+.reviews-item-from {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.reviews-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  @media screen and (min-width: $desktop) {
+    width: 72px;
+    height: 72px;
+  }
+}
+.reviews-item-text,
+.reviews-item-from-name {
+  @include font(16, 24);
+  @media screen and (min-width: $desktop) {
+    @include font(24, 36);
+  }
+}
+.reviews-item-text {
+  height: 108px;
+}
+.reviews-slider {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1104px;
+  }
+}
+.reviews-list {
+  display: flex;
+
+  @media screen and (min-width: $desktop) {
+    width: 1104px;
+    transition: transform 0.3s ease;
+    gap: 24px;
+    margin: 0 auto;
+  }
+}

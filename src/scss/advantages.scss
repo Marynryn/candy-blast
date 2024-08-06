@@ -1,0 +1,46 @@
+@import './common/mixins';
+@import './common/vars';
+@import './common/breakpoints';
+
+.advantages-icon {
+  width: 120px;
+  height: 120px;
+  fill: transparent;
+}
+.gradient-svg {
+  text-align: center;
+}
+.advantages-item {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @media screen and (min-width: $desktop) {
+    width: 416px;
+  }
+}
+.advantages-item-title {
+  @include font(24, 28.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    @include font(32, 38.4);
+  }
+}
+.advantages-item-text {
+  @include font(16, 24);
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    width: 296px;
+    margin: 0 auto;
+  }
+}
+.advantages-list {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+}

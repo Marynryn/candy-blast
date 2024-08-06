@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-game" viewBox="0 0 120 120">
+    <g clip-path="url(#clip0_2075_850)">
+      <path d="M60.0002 25H77.5002C84.1306 25 90.4895 27.6339 95.1779 32.3223C99.8663 37.0107 102.5 43.3696 102.5 50C102.5 56.6304 99.8663 62.9893 95.1779 67.6777C90.4895 72.3661 84.1306 75 77.5002 75H50.0002L29.9252 96.135C28.208 97.9429 25.9497 99.1438 23.4906 99.5566C21.0316 99.9693 18.5049 99.5717 16.2915 98.4235C14.0781 97.2753 12.2979 95.4389 11.219 93.1908C10.1402 90.9428 9.82124 88.4051 10.3102 85.96L18.4802 45.095C19.6143 39.4273 22.6772 34.3277 27.1477 30.6639C31.6182 27.0001 37.2202 24.9986 43.0002 25H60.0002Z" stroke="url(#paint0_linear_2075_850)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M70 75L90.35 96.42C92.0638 98.2233 94.3161 99.4222 96.7691 99.8369C99.222 100.252 101.743 99.8597 103.955 98.7199C106.166 97.5802 107.948 95.7541 109.034 93.5156C110.119 91.2772 110.449 88.7471 109.975 86.305L101.975 45.145" stroke="url(#paint1_linear_2075_850)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 45V55" stroke="url(#paint2_linear_2075_850)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M35 50H45" stroke="url(#paint3_linear_2075_850)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M70 50H80" stroke="url(#paint4_linear_2075_850)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+      <linearGradient id="paint0_linear_2075_850" x1="56.2936" y1="25" x2="56.2936" y2="99.7152" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#B91A8E"/>
+        <stop offset="1" stop-color="#4A1A9A"/>
+      </linearGradient>
+      <linearGradient id="paint1_linear_2075_850" x1="90.093" y1="45.145" x2="90.093" y2="99.9978" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#B91A8E"/>
+        <stop offset="1" stop-color="#4A1A9A"/>
+      </linearGradient>
+      <linearGradient id="paint2_linear_2075_850" x1="40.5" y1="45" x2="40.5" y2="55" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#B91A8E"/>
+        <stop offset="1" stop-color="#4A1A9A"/>
+      </linearGradient>
+      <linearGradient id="paint3_linear_2075_850" x1="40" y1="50" x2="40" y2="51" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#B91A8E"/>
+        <stop offset="1" stop-color="#4A1A9A"/>
+      </linearGradient>
+      <linearGradient id="paint4_linear_2075_850" x1="75" y1="50" x2="75" y2="51" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#B91A8E"/>
+        <stop offset="1" stop-color="#4A1A9A"/>
+      </linearGradient>
+      <clipPath id="clip0_2075_850">
+        <rect width="120" height="120" fill="white"/>
+      </clipPath>
+    </defs>
+  </symbol>
+</svg>

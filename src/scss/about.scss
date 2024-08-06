@@ -1,0 +1,60 @@
+@import './common/mixins';
+@import './common/vars';
+@import './common/breakpoints';
+
+.about-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 198px;
+
+  margin-bottom: 24px;
+  @media screen and (min-width: $desktop) {
+    height: 308px;
+    margin-bottom: 0;
+  }
+}
+
+.about-image {
+  max-height: 100%;
+  object-fit: contain;
+}
+.about-text {
+  @include font(16, 24);
+  margin-bottom: 40px;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    @include font(24, 36);
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+  }
+}
+.about-item {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+}
+.about-list {
+  @media screen and (min-width: $desktop) {
+  }
+}
+.about-item.reverse {
+  @media screen and (min-width: $desktop) {
+    flex-direction: row-reverse;
+  }
+}
+.bg {
+  @media screen and (min-width: $desktop) {
+    background-image: url(../img/bg-about.webp);
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../img/bg-about-2x.webp);
+    }
+  }
+}

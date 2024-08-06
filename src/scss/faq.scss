@@ -1,0 +1,111 @@
+@import './common/mixins';
+@import './common/vars';
+@import './common/breakpoints';
+
+.faq-toggle {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  padding: 0;
+}
+.faq-item {
+  border-radius: 16px;
+  background: var(--cb-basic-white, #fff);
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  align-content: center;
+  gap: 16px 4px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  @media screen and (min-width: $desktop) {
+    padding: 24px;
+  }
+}
+.fag-item-question {
+  font-weight: 700;
+  @include font(16, 24);
+  text-align: left;
+  width: 100%;
+  @media screen and (min-width: $desktop) {
+    @include font(24, 36);
+  }
+}
+.faq-item-answer {
+  @include font(16, 24);
+  @media screen and (min-width: $desktop) {
+    @include font(24, 36);
+  }
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @media screen and (min-width: $desktop) {
+    width: 856px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+}
+.faq-item-answer {
+  display: none;
+}
+.faq-item-icon-minus,
+.faq-item-icon-plus {
+  width: 24px;
+  height: 24px;
+
+  stroke: $_default_color;
+}
+.faq-item-answer {
+  display: none;
+}
+
+.faq-item-answer.visible {
+  display: block;
+}
+
+.faq-item-icon-minus.hidden {
+  display: none;
+}
+
+.faq-item-icon-plus.hidden {
+  display: none;
+}
+
+.faq {
+  position: relative;
+  overflow: hidden;
+}
+
+.faq::before {
+  content: '';
+  position: absolute;
+  top: 280px;
+  left: 200px;
+
+  background-image: url(../img/bg-faq.webp);
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  transform: rotate(79deg);
+  transform-origin: center;
+  z-index: -1;
+  @media screen and (min-width: $desktop) {
+    background-size: contain;
+    top: 0;
+    left: 150px;
+    width: 1779px;
+    height: 1237px;
+    transform: rotate(-6.165deg);
+    scale: 1.2;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .faq {
+    background-image: url(../img/bg-faq-2x.webp);
+  }
+}
