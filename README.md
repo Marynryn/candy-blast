@@ -17,5 +17,5 @@ To view and interact with the **Candy Blast** landing page:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/candy-blast-landing-page.git
+   git clone https://github.com/Marynryn/candy-blast.git
    ```
