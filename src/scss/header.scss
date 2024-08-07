@@ -67,12 +67,12 @@
   &::before,
   &::after {
     content: '';
-    display: inline-block;
+    display: block;
     width: 8px;
     height: 8px;
     border-radius: 50%;
     position: absolute;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
     opacity: 0;

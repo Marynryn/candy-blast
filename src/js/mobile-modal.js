@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function switchMenu() {
     const currentPage = window.location.pathname;
 
-    if (currentPage.includes('page-2.html' || 'page-3.html')) {
+    if (
+      currentPage.includes('page-2.html') ||
+      currentPage.includes('page-3.html')
+    ) {
       navMob.classList.remove('active');
       navPage2.classList.add('active');
       nav.classList.remove('active');
@@ -20,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navPage2.classList.remove('active');
       navMob.classList.add('active');
       nav.classList.add('active');
-      header.classList.remove('.active');
+      header.classList.remove('active');
     }
   }
 
@@ -35,7 +38,18 @@ document.addEventListener('DOMContentLoaded', function () {
     menuClose.classList.toggle('active', !isMenuOpen);
   }
 
+  function closeMenu() {
+    if (mobileMenu.classList.contains('active')) {
+      toggleMenu();
+    }
+  }
+
   menuOpen.addEventListener('click', toggleMenu);
   menuClose.addEventListener('click', toggleMenu);
   backdrop.addEventListener('click', toggleMenu);
+
+  const navLinks = document.querySelectorAll('#mobile-menu .nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 });

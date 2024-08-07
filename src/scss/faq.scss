@@ -3,12 +3,29 @@
 @import './common/breakpoints';
 
 .faq-toggle {
-  border: none;
-  background-color: transparent;
   display: flex;
   gap: 4px;
   width: 100%;
+  cursor: pointer;
+}
+
+.open-close {
+  border: none;
+  background-color: transparent;
   padding: 0;
+  &:hover {
+    svg {
+      stroke: $_hover_color;
+      transition: stroke 0.3s ease;
+    }
+  }
+
+  &:focus {
+    svg {
+      stroke: $_pressed_color;
+      transition: stroke 0.3s ease;
+    }
+  }
 }
 .faq-item {
   border-radius: 16px;
@@ -58,15 +75,6 @@
   height: 24px;
 
   stroke: $_default_color;
-  &:hover {
-    stroke: $_hover_color;
-    transition: stroke 0.3s ease;
-  }
-
-  &:focus {
-    stroke: $_pressed_color;
-    transition: stroke 0.3s ease;
-  }
 }
 .faq-item-answer {
   display: none;
