@@ -17,8 +17,10 @@
 }
 
 .about-image {
-  max-height: 100%;
-  object-fit: contain;
+  @media screen and (min-width: $desktop) {
+    width: 636px;
+    height: 308px;
+  }
 }
 .about-text {
   @include font(16, 24);
@@ -53,6 +55,7 @@
 .bg {
   @media screen and (min-width: $desktop) {
     background-image: url(../img/bg-about.webp);
+    background-size: contain;
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       background-image: url(../img/bg-about-2x.webp);
     }

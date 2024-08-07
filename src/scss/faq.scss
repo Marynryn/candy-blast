@@ -102,6 +102,9 @@
   transform: rotate(79deg);
   transform-origin: center;
   z-index: -1;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url(../img/bg-faq-2x.webp);
+  }
   @media screen and (min-width: $desktop) {
     background-size: contain;
     top: 0;
@@ -110,11 +113,5 @@
     height: 1237px;
     transform: rotate(-6.165deg);
     scale: 1.2;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .faq {
-    background-image: url(../img/bg-faq-2x.webp);
   }
 }
