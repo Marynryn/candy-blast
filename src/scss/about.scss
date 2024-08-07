@@ -56,6 +56,8 @@
   @media screen and (min-width: $desktop) {
     background-image: url(../img/bg-about.webp);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       background-image: url(../img/bg-about-2x.webp);
     }
