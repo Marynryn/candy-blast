@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <symbol id="icon-game" viewBox="0 0 120 120">
     <g clip-path="url(#clip0_2075_850)">
       <path d="M60.0002 25H77.5002C84.1306 25 90.4895 27.6339 95.1779 32.3223C99.8663 37.0107 102.5 43.3696 102.5 50C102.5 56.6304 99.8663 62.9893 95.1779 67.6777C90.4895 72.3661 84.1306 75 77.5002 75H50.0002L29.9252 96.135C28.208 97.9429 25.9497 99.1438 23.4906 99.5566C21.0316 99.9693 18.5049 99.5717 16.2915 98.4235C14.0781 97.2753 12.2979 95.4389 11.219 93.1908C10.1402 90.9428 9.82124 88.4051 10.3102 85.96L18.4802 45.095C19.6143 39.4273 22.6772 34.3277 27.1477 30.6639C31.6182 27.0001 37.2202 24.9986 43.0002 25H60.0002Z" stroke="url(#paint0_linear_2075_850)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
