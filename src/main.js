@@ -1,4 +1,4 @@
-import './js/mobile-modal';
-import './js/gallery';
-import './js/faq';
-import './js/reviews';
+import './js/mobile-modal.js';
+import './js/gallery.js';
+import './js/faq.js';
+import './js/reviews.js';

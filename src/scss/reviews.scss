@@ -29,7 +29,7 @@
   @media screen and (min-width: $desktop) {
     display: block;
     position: absolute;
-    top: 60%;
+    top: 65%;
     width: 56px;
     height: 56px;
     transform: translateY(-50%);
@@ -37,18 +37,19 @@
     border: none;
     padding: 0;
     cursor: pointer;
+    transition: transform 0.3s ease;
     svg {
       fill: $_default_color;
       width: 56px;
       height: 56px;
       &:hover {
         fill: $_hover_color;
-        transition: stroke 0.3s ease;
+        transition: fill 0.3s ease;
       }
 
       &:focus {
         fill: $_pressed_color;
-        transition: stroke 0.3s ease;
+        transition: fill 0.3s ease;
       }
     }
   }

@@ -19,17 +19,23 @@
     position: relative;
 
     justify-content: space-between;
-    @media screen and (min-width: $desktop) {
-      &.active {
-        width: 850px;
-      }
-    }
   }
 }
+.header-box.active {
+  @media screen and (min-width: $desktop) {
+    width: 850px;
+  }
+}
+
 .logo {
   width: 85px;
   height: 48px;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    scale: 1.05;
+    transition: scale 0.3s ease;
+  }
 }
 .nav {
   display: none;

@@ -58,6 +58,15 @@
   height: 24px;
 
   stroke: $_default_color;
+  &:hover {
+    stroke: $_hover_color;
+    transition: stroke 0.3s ease;
+  }
+
+  &:focus {
+    stroke: $_pressed_color;
+    transition: stroke 0.3s ease;
+  }
 }
 .faq-item-answer {
   display: none;

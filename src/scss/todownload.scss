@@ -16,10 +16,10 @@
   color: $_white_color;
   transition: background 0.8s ease;
   &:hover {
-    background: var(--cb-liner, $_hover_color);
+    background: $_hover_color;
   }
   &:focus {
-    background: var(--cb-liner, $_pressed_color);
+    background: $_pressed_color;
   }
   svg {
     width: 54px;

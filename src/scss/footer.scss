@@ -24,6 +24,14 @@ footer {
   @include font(16, 16);
   text-transform: uppercase;
   padding: 8px 24px;
+  &:hover {
+    color: $_hover_color;
+    transition: color 0.3s ease;
+  }
+  &:focus {
+    color: $_pressed_color;
+    transition: color 0.3s ease;
+  }
   @media screen and (min-width: $desktop) {
     @include font(32, 32);
   }
