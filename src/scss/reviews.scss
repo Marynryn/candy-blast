@@ -102,3 +102,32 @@
     margin: 0 auto;
   }
 }
+.reviews-pagination-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 8px;
+
+  padding: 0;
+
+  svg {
+    scale: 2;
+    fill: $_main_color;
+    width: 8px;
+    height: 8px;
+    &:hover {
+      fill: $_hover_color;
+      transition: stroke 0.3s ease;
+    }
+
+    &:focus {
+      fill: $_pressed_color;
+      transition: stroke 0.3s ease;
+    }
+  }
+}
+.reviews-pagination-button.active {
+  svg {
+    fill: $_default_color;
+  }
+}

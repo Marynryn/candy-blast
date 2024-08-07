@@ -78,11 +78,7 @@ button.next {
   width: 8px;
 
   padding: 0;
-  &:active {
-    svg {
-      fill: $_default_color;
-    }
-  }
+
   svg {
     scale: 2;
     fill: $_main_color;
@@ -99,7 +95,11 @@ button.next {
     }
   }
 }
-
+.dot.active {
+  svg {
+    fill: $_default_color;
+  }
+}
 .slide-1 {
   background-image: url('../img/mobile/gallery1.webp');
   background-size: cover;

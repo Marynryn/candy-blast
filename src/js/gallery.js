@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   let slideIndex = 1;
+  let startX = 0;
+  let endX = 0;
+
   showSlides(slideIndex);
 
   document
@@ -43,4 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
       dot.className = index + 1 === slideIndex ? 'dot active' : 'dot';
     });
   }
+
+  function handleSwipe() {
+    const threshold = 50;
+    if (endX < startX - threshold) {
+      plusSlides(1);
+    } else if (endX > startX + threshold) {
+      plusSlides(-1);
+    }
+  }
+
+  document.querySelector('.slider').addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  document.querySelector('.slider').addEventListener('touchend', e => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
 });

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   let slideIndex = 1;
+  let startX;
 
   function getResponsiveSettings() {
     const width = window.innerWidth;
@@ -21,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateSlides() {
     const settings = getResponsiveSettings();
-
     showSlides(
       slideIndex,
       settings.slidesToShowOnNav,
@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function plusSlides(n) {
     const settings = getResponsiveSettings();
     slideIndex += n;
-
     showSlides(
       slideIndex,
       settings.slidesToShowOnNav,
@@ -62,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showSlides(n, slidesToShowOnNav, slidesToShowOnPagination) {
     const settings = getResponsiveSettings();
-
     const slides = document.querySelectorAll('.reviews-item');
     const totalSlides = slides.length;
 
@@ -76,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startSlide = (slideIndex - 1) * slidesToShowOnPagination;
     const endSlide = startSlide + slidesToShowOnPagination;
-
+    const dots = document.querySelectorAll('.reviews-pagination-button');
     slides.forEach((slide, index) => {
       if (index >= startSlide && index < endSlide) {
         slide.style.display = 'block';
@@ -84,13 +82,32 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.style.display = 'none';
       }
     });
+    dots.forEach(dot => dot.classList.remove('active'));
 
-    const dots = document.querySelectorAll('.reviews-pagination-button');
     dots.forEach((dot, index) => {
-      const dotSlideIndex =
-        Math.floor((index * slidesToShowOnPagination) / totalSlides) + 1;
-      dot.classList.toggle('active', dotSlideIndex === slideIndex);
+      const dotSlideIndex = Math.floor((index * totalSlides) / dots.length) + 1;
+      if (dotSlideIndex === slideIndex) {
+        dot.classList.add('active');
+      }
     });
+  }
+
+  function handleSwipe(startX, endX) {
+    const threshold = 50;
+    if (endX < startX - threshold) {
+      plusSlides(1);
+    } else if (endX > startX + threshold) {
+      plusSlides(-1);
+    }
+  }
+
+  function onTouchStart(event) {
+    startX = event.touches[0].clientX;
+  }
+
+  function onTouchEnd(event) {
+    const endX = event.changedTouches[0].clientX;
+    handleSwipe(startX, endX);
   }
 
   updateSlides();
@@ -116,4 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('resize', updateSlides);
+
+  document
+    .querySelector('.reviews-slider')
+    .addEventListener('touchstart', onTouchStart);
+  document
+    .querySelector('.reviews-slider')
+    .addEventListener('touchend', onTouchEnd);
 });
