@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
   function switchMenu() {
     const currentPage = window.location.pathname;
 
-    if (currentPage.includes('index.html')) {
-      navPage2.classList.remove('active');
-      navMob.classList.add('active');
-      nav.classList.add('active');
-      header.classList.remove('.active');
-    } else {
+    if (currentPage.includes('page-2.html' || 'page-3.html')) {
       navMob.classList.remove('active');
       navPage2.classList.add('active');
       nav.classList.remove('active');
       header.classList.add('active');
+    } else {
+      navPage2.classList.remove('active');
+      navMob.classList.add('active');
+      nav.classList.add('active');
+      header.classList.remove('.active');
     }
   }
 
