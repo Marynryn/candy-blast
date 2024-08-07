@@ -5,7 +5,11 @@
 .advantages-icon {
   width: 120px;
   height: 120px;
-  fill: transparent;
+  margin: 0 auto;
+  @media screen and (min-width: $desktop) {
+    width: 152px;
+    height: 152px;
+  }
 }
 .gradient-svg {
   text-align: center;
